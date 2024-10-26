@@ -1,0 +1,82 @@
+div.Contenedor
+{
+    margin-top: 75px;
+    min-height: 1000px;
+    display: block;
+    border: 1px solid black;
+}
+.flip-container {
+    background-color: transparent;
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+    margin:0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-bottom: 500px; }
+  
+  .card {
+    position: relative;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+
+  }
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .card h3, card p {
+    display:block; 
+  } 
+  
+  .card p, .card button { 
+    color:#FFF; 
+  }
+  
+  /* GIRA HORIZONTAL */
+  
+  
+  /* GIRA VERTICAL 
+  .flip-container:hover .card {
+    transform: rotateX(180deg);
+  }
+  */
+  
+  
+  .frente, .dorso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .frente {
+    background-color: #dd5599;
+    color: #fff;
+    display: flex;
+    border-radius: 20px;
+  }
+  
+  .dorso {
+    background-color: #6ed3ab;
+    color: #faebd7;
+    /*transform: rotateX(180deg);*/
+    transform: rotateY(180deg);
+    text-align:center;
+    border-radius: 20px;
+  }
+  
+  .dorso p {
+    font-size:0.65em;
+  }
+  body {
+ 
+    margin: 0;
+    padding: 0;
+  }
