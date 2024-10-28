@@ -36,7 +36,7 @@ div#Contenido {
     
 }
 
-div.linea{
+.linea{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ div.linea{
 }
 
 
-div.linea:last-child {
+.linea:last-child {
     margin-bottom: 0;
 }
 div.recuadro {
