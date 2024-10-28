@@ -6,6 +6,8 @@
     color: white;
     -webkit-text-stroke: black 1px;
 }
+.Titulo h1
+{margin: 0;}
 #Protagonistas
 {
   background-image:url(JujutsuJPG/PROTASBG.jpg) ;
