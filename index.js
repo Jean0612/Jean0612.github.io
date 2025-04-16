@@ -9,3 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
         spotlight.style.background = `radial-gradient(circle 700px at ${x}px ${y}px, rgba(255, 255, 255, 0.15), transparent 60%)`;
     });
 });
+// Detectar si es móvil con una expresión regular sobre el user agent
+const esMovil = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+// Crear y cargar el link al CSS correcto
+const linkEstilo = document.createElement("link");
+linkEstilo.rel = "stylesheet";
+linkEstilo.type = "text/css";
+linkEstilo.href = esMovil ? "estilo-movil.css" : "estilo-pc.css";
+
+// Agregar el <link> al <head>
+document.head.appendChild(linkEstilo);

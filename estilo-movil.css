@@ -1,0 +1,138 @@
+:root {
+    /* Variables de color */
+    --hover-boton: #F7F0f5;
+    --bgcolor: #051923;
+    --constrast: #003554;
+    --fond-color: #F7F0f5;
+    --thover-color: #3fa8ae;
+    
+    /* Fuentes */
+    --ff: Arial, sans-serif;
+  }
+  
+  /* General */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bgcolor);
+    color: var(--fond-color);
+    font-family: var(--ff);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  /* Layout principal */
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* Left side */
+  #left-side {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  #left-side h1 {
+    font-size: 24px;
+    color: var(--thover-color);
+    margin-bottom: 5px;
+  }
+  
+  #left-side-content p {
+    margin: 5px 0;
+  }
+  
+  /* Menú de navegación */
+  .index ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .index ul li {
+    margin: 10px 0;
+  }
+  
+  .index ul li a {
+    color: var(--thover-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid var(--thover-color);
+    border-radius: 5px;
+    display: inline-block;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .index ul li a:hover {
+    background-color: var(--thover-color);
+    color: var(--bgcolor);
+  }
+  
+  /* Footer y botones sociales */
+  footer {
+    margin-top: 20px;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .btn svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--thover-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover svg {
+    transform: scale(1.1);
+    fill: var(--hover-boton);
+  }
+  
+  /* Right side (secciones) */
+  #right-side .right-side-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #right-side h2 {
+    font-size: 20px;
+    color: var(--thover-color);
+    margin-bottom: 5px;
+  }
+  
+  .proyecto {
+    background-color: var(--constrast);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .proyecto h3 {
+    margin: 0 0 5px;
+    color: var(--hover-boton);
+  }
+  
+  .proyecto p {
+    margin: 0;
+  }
+  
+  /* Ajustes visuales adicionales */
+  a {
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--hover-boton);
+  }
+  
