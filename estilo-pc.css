@@ -135,7 +135,10 @@ body {
   background-color: #072434;
   filter: brightness(110%);
 }
-
+.proyecto h3 a{
+text-decoration: none;
+color: var(--fond-color);
+}
 
 
 
