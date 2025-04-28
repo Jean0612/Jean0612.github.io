@@ -93,14 +93,33 @@
     background-color: var(--constrast);
     padding: 10px;
     border-radius: 8px;
-    margin-bottom:10px ;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  
   .proyecto h3 {
     margin: 0 0 5px;
     color: var(--hover-boton);
   }
-  
+  .proyecto h3 a {
+    text-decoration: none;
+    color: var(--hover-boton);
+  }
+  .proyecto-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}
+   .proyecto-content img 
+   {
+    
+    max-width: 200px;
+    max-height: 200px ;
+    border-radius: 8px;
+    margin-bottom: 10px;  
+  }
   .proyecto p {
     margin: 0;
   }
