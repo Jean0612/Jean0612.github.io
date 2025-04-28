@@ -127,6 +127,12 @@ body {
   align-items: center;
   gap: 10px;
 }
+.proyecto-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 .proyecto:hover h3 {
   color: var(--thover-color);
 }
