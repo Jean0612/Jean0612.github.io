@@ -29,9 +29,9 @@ const median = nums => {
 const spreadsheetFunctions = {
   
   sum,
-subtract: nums => nums.reduce((acc, el) => acc - el),
-multiply: nums => nums.reduce((acc, el) => acc * el, 1),
-divide: nums => nums.reduce((acc, el) => acc / el),
+  subtract: nums => nums.reduce((acc, el) => acc - el),
+  multiply: nums => nums.reduce((acc, el) => acc * el, 1),
+  divide: nums => nums.reduce((acc, el) => acc / el),
   average,
   median,
   even: nums => nums.filter(isEven),
