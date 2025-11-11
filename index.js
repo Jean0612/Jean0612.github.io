@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mousemove", (e) => {
         const x = e.clientX;
         const y = e.clientY;
-        spotlight.style.background = `radial-gradient(circle 700px at ${x}px ${y}px, rgba(255, 255, 255, 0.15), transparent 60%)`;
+        spotlight.style.background = `radial-gradient(circle 500px at ${x}px ${y}px, rgba(255, 255, 255, 0.15), transparent 60%)`;
     });
 });
 // Detectar si es móvil con una expresión regular sobre el user agent
