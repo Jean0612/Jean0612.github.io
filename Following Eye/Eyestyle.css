@@ -1,14 +1,106 @@
-body
-{ 
-    background-color: gray;
+body { 
+  background-color: gray; 
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-div.lash
-{
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    border-radius: 50%;
-    position: relative;
-    margin: 100px auto;
-    box-shadow: inset 0 0 20px black;
+
+.eye-container {
+  width: 400px;
+  height: 400px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 75% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Iris */
+.iris {
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, dodgerblue 30%, royalblue 70%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+/* Pupila */
+.pupil {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: black;
+  z-index: 3;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+/* Hover pupila */
+.eye-container:hover .pupil {
+  width: 15%;
+  height: 15%;
+  transition: 300ms ease-in-out;
+}
+/* Párpado superior */
+.eyelid-top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 90%;
+  background: gray;
+  z-index: 5;
+  transform: translate(-50%, -180%) rotate(-45deg); /* 👈 lo aleja visualmente hacia arriba */
+  transform-origin: center bottom;
+  animation: blinkTop 5s infinite ease-in-out;
+}
+
+/* Párpado inferior */
+.eyelid-bottom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 90%;
+  background: gray;
+  z-index: 5;
+  transform: translate(-50%, 80%) rotate(-45deg); /* 👈 lo aleja visualmente hacia abajo */
+  transform-origin: center top;
+  animation: blinkBottom 5s infinite ease-in-out;
+}
+
+/* Animación de parpadeo */
+@keyframes blinkTop {
+  0%, 90%, 100% {
+    transform: translate(-50%, -180%) rotate(-45deg);
+  }
+  95% {
+    transform: translate(-50%, -50%) rotate(-45deg); /* baja al centro */
+  }
+}
+
+@keyframes blinkBottom {
+  0%, 90%, 100% {
+    transform: translate(-50%, 80%) rotate(-45deg);
+  }
+  95% {
+    transform: translate(-50%, -50%) rotate(-45deg); /* sube al centro */
+  }
 }
